@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+:root{
+    --cor_fundo: #575759;
+    --cor_texto: #FFFFFF;
+    --cor_button_criptografar: #CC3E3E;
+    --cor_button_descriptografar: #FA7777;
+    --cor_cartao: #F2F2F2;
+    --cor_texto_cartao: #575759;
+    --cartao22: #AFAFAF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", cursive;
+    text-decoration: none;
+    background: var(--cor_fundo);
+}
+
+body{
+    height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    position: absolute;
+    margin: 48px 0px 0px 48px;
+}
+
+header .pokebola{
+    display: flex;
+    align-items: flex-start;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+    background-position: center;
+}
+
+.input{
+    width: 60%;
+    margin: 168px 0px 0px 240px;
+    background: transparent;
+}
+
+.input_campo{
+    width: 700px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--cor_fundo);
+    border-radius: 15px;
+    resize: none;
+}
+
+.input_campo::placeholder,:focus{
+    color: var(--cor_texto);
+}
+
+.alerta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 5px;
+    position: absolute;
+    top: 580px;
+}
+
+.alerta_img{
+    width: 13px;
+}
+
+.alerta_texto{
+    width: 100%;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 0.81rem;
+    line-height: 160%;
+    opacity: 0.8;
+    color: var(--cor_texto);
+}
+
+.butoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 600px;
+}
+
+.btn_criptografar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.81rem;
+    line-height: 19px;
+    text-align: center;
+    color: var(--cor_texto);
+    background: var(--cor_button_criptografar);
+    border: 1px solid var(--cor_button_criptografar);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.btn_criptografar:active{
+    box-shadow: inset 2px 2px 4px var(--cor_button_descriptografar)
+    inset -3px -4px 8px var(--cor_fundo);
+    color: var(--cor_button_descriptografar);
+}
+
+.btn_descriptografar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.81rem;
+    line-height: 19px;
+    text-align: center;
+    color: var(--cor_texto);
+    background: var(--cor_button_descriptografar);
+    border: 1px solid var(--cor_button_descriptografar);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.btn_copiar:active,
+.btn_descriptografar:active{
+    box-shadow: inset 2px 2px 4px var(--cor_button_descriptografar)
+    inset -3px -4px 8px var(--cor_fundo);
+    color: #FFA7A7;
+}
+
+.cartao{
+    width: 300px;
+    height: 650px;
+    background: var(--cor_cartao);
+    box-shadow: 10px 24px 32px -8px var(--cartao22);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.cartao_container{
+    width: 250px;
+    margin: auto;
+    margin-top: 35%;
+    background: var(--cor_cartao);
+}
+
+.cartao_img{
+    background: var(--cor_cartao);
+}
+
+.cartao_texto1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 120%;
+    text-align: center;
+    color: var(--cor_texto_cartao);
+    background: var(--cor_cartao);
+}
+
+.cartao_texto2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.93rem;
+    line-height: 120%;
+    text-align: center;
+    color: var(--cor_texto_cartao);
+    background: var(--cor_cartao);
+}
+
+.avaliar{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 36px;
+    color: var(--cor_button_criptografar);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.avaliar:focus{
+    outline: none;
+}
+
+.btn_copiar{
+    width: 260px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 24px;
+    font-size: 1rem;
+    line-height: 19px;
+    text-align: center;
+    background-color: var(--cor_cartao);
+    border: 1px solid var(--cor_button_descriptografar);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--cor_texto_cartao);
+}
+
+.btn_criptografar:hover,
+.btn_descriptografar:hover,
+.btn_copiar:hover{
+    transform: scale(0.97)
+}
+
+footer{
+    margin-top: 130px;
+    padding: 10px;
+    border-top: 2px solid var(--cor_button_criptografar);
+    color: var(--cor_texto);
+    text-align: center;
+    height: 5px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cor_texto);
+}
+
+.instagram:hover{
+    color: var(--cor_texto);
+    opacity: 0.8;
+}
+
+.github:hover{
+    color: var(--cor_texto);
+    opacity: 0.8;
+}
+
+.linkedin:hover{
+    color: var(--cor_texto);
+    opacity: 0.8;
+}
